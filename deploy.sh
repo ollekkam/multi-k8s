@@ -1,10 +1,10 @@
-docker build -t ollekkam1/k8s:multi-client:latest -t ollekkam1/k8s:multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t ollekkam1/k8s:multi-client-latest -t ollekkam1/k8s:multi-client-$SHA -f ./client/Dockerfile ./client
 docker build -t ollekkam1/k8s:multi-server:latest -t ollekkam1/k8s:multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t ollekkam1/k8s:multi-worker:latest -t ollekkam1/k8s:multi-worker:$SHA -f ./worker/Dockerfile ./worker
-docker push ollekkam1/k8s:multi-client:latest
+docker push ollekkam1/k8s:multi-client-latest
 docker push ollekkam1/k8s:multi-server:latest
 docker push ollekkam1/k8s:multi-worker:latest
-docker push ollekkam1/k8s:multi-client:$SHA
+docker push ollekkam1/k8s:multi-client-$SHA
 docker push ollekkam1/k8s:multi-server:$SHA
 docker push ollekkam1/k8s:multi-worker:$SHA
 
